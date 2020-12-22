@@ -7,7 +7,7 @@ class ProductForm(forms.Form):
 
     reference           = forms.ChoiceField(choices=REFERENCE, required='Générique')
     name                = forms.CharField(label='Name', max_length=30)
-    created_at          = forms.DateField()
+    # created_at          = forms.DateTimeField()
 
 # class ProductForm(forms.Form):
 #

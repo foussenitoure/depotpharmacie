@@ -1,5 +1,6 @@
 import time
 from django.db import models
+import datetime
 
 from django.db.models import Avg
 
@@ -27,7 +28,7 @@ class Person(models.Model):
         last_name    = models.CharField(max_length=50, null=True, blank=True, verbose_name='Prénom')
         contact      = models.CharField(max_length=50, null=True, blank=True, verbose_name='Numéro de Téléphone')
         email        = models.EmailField(max_length=50, null=True, blank=True, verbose_name='Adresse Email')
-        created_at   = models.DateField(auto_now=True)
+        created_at   = models.DateTimeField(auto_now=True)
 
         def __str__(self):
             return ('{} - {} - {}').format(self.first_name, self.last_name, self.contact)
@@ -49,7 +50,7 @@ class Product(models.Model):
 
     reference     = models.CharField(max_length=30, choices=REFERENCE, default='GENERIQUE')
     name          = models.CharField(max_length=100, blank=True, verbose_name='Nom du produit')
-    created_at    = models.DateField()
+    created_at    = models.DateField(auto_now=True)
 
     def __str__(self):
         return ('{}-{}').format(self.name, self.reference)

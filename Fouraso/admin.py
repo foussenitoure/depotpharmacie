@@ -33,9 +33,11 @@ class Product(admin.ModelAdmin):
     list_display = (
         'name',
         'reference',
+
         )
 
     list_filter = ['name']
+    exclude = ['created_at',]
 
 @admin.register(Command)
 class Command(admin.ModelAdmin):
@@ -46,9 +48,15 @@ class Command(admin.ModelAdmin):
         'qteCommande',
         'price_unitaire',
         'montant',
+        'created_at'
+        # 'montant_count',
         )
-    exclude = ['created_at']
+    exclude = []
     list_filter = ['created_at']
+
+    # def montant_count(self, obj):
+    #     return Stock.objects.filter(qteEntry=obj).count()
+    # montant_count.short_description = "Nombre_Entree"
 
 
 @admin.register(Stock)
