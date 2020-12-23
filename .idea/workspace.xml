@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65fe0caf-2dda-4e90-8806-2c0219124350" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="phar@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="phar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="phar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="phar: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="phar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="phar: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="phar@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="phar: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fouraso/form.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fouraso/templates/Fouraso/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fouraso/templates/Fouraso/products_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fouraso/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="71" column="84" selection-start-line="71" selection-start-column="84" selection-end-line="71" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pharmacie/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fouraso/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CharfieldCharfield</find>
+      <find>Charfiel</find>
+      <find>Charfield</find>
+      <find>CharField</find>
+      <find>ManyTomany</find>
+      <find>People</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Charfiel</replace>
+      <replace>CharField</replace>
+      <replace>ManyToMany</replace>
+      <replace>Person</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Fouraso/fouraso/products.html" />
+        <option value="$PROJECT_DIR$/Fouraso/Fouraso/products.html" />
+        <option value="$PROJECT_DIR$/pharmacie/settings.py" />
+        <option value="$PROJECT_DIR$/Fouraso/templates/Fouraso/products.html" />
+        <option value="$PROJECT_DIR$/Fouraso/urls.py" />
+        <option value="$PROJECT_DIR$/templates/tables.html" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/Fouraso/views.py" />
+        <option value="$PROJECT_DIR$/Fouraso/form.py" />
+        <option value="$PROJECT_DIR$/Fouraso/templates/Fouraso/products_list.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/js/page.js" />
+        <option value="$PROJECT_DIR$/Fouraso/admin.py" />
+        <option value="$PROJECT_DIR$/Fouraso/models.py" />
+        <option value="$PROJECT_DIR$/pharmacie/urls.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="673" />
+    <option name="height" value="739" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pharmacie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pharmacie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pharmacie" type="462c0819:PsiDirectoryNode" />
+              <item name="Fouraso" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pharmacie" type="462c0819:PsiDirectoryNode" />
+              <item name="pharmacie" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/Fouraso/templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="pharmacie" type="Python.DjangoServer" factoryName="Django server">
+      <module name="pharmacie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65fe0caf-2dda-4e90-8806-2c0219124350" name="Default Changelist" comment="" />
+      <created>1607130912112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607130912112</updated>
+      <workItem from="1607130919198" duration="1053000" />
+      <workItem from="1607182108280" duration="27143000" />
+      <workItem from="1607338054356" duration="6171000" />
+      <workItem from="1607480619368" duration="8189000" />
+      <workItem from="1607911864034" duration="12180000" />
+      <workItem from="1608041948237" duration="16309000" />
+      <workItem from="1608152537471" duration="5242000" />
+      <workItem from="1608232063312" duration="928000" />
+      <workItem from="1608370018897" duration="13493000" />
+      <workItem from="1608468785266" duration="4075000" />
+      <workItem from="1608508379541" duration="8772000" />
+      <workItem from="1608655266959" duration="3231000" />
+    </task>
+    <task id="LOCAL-00001" summary="add all files">
+      <created>1608425013288</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608425013288</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add all files">
+      <created>1608596658983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608596658983</updated>
+    </task>
+    <task id="LOCAL-00003" summary="config  urls.py">
+      <created>1608683141541</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608683141541</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="106786000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="673" height="739" extended-state="0" />
+    <layout>
+      <window_info anchor="top" x="31" y="618" width="1238" height="186" id="Python Console" order="0" sideWeight="0.6695312" type="WINDOWED" weight="0.26308346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787837" visible="true" weight="0.4009662" />
+      <window_info id="Structure" order="1" sideWeight="0.5021216" side_tool="true" weight="0.2374798" />
+      <window_info id="Favorites" order="2" sideWeight="0.5021216" side_tool="true" weight="0.2374798" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8062397" weight="0.4037901" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.5890625" weight="0.3265306" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49919224" weight="0.32798833" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4109375" side_tool="true" weight="0.3265306" />
+      <window_info active="true" anchor="bottom" auto_hide="true" x="21" y="320" width="1238" height="159" id="Terminal" order="11" sideWeight="0.64458805" visible="true" weight="0.7280702" />
+      <window_info anchor="bottom" id="Database Console" order="12" />
+      <window_info anchor="right" x="0" y="0" width="270" height="524" id="Documentation" order="0" sideWeight="0.500821" side_tool="true" weight="0.21405493" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="R Graphics" order="5" weight="0.32972974" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49917898" visible="true" weight="0.4299517" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="top" x="31" y="618" width="1238" height="186" id="Python Console" order="0" sideWeight="0.6695312" type="WINDOWED" weight="0.26308346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787837" visible="true" weight="0.21802574" />
+      <window_info id="Structure" order="1" sideWeight="0.5021216" side_tool="true" weight="0.2374798" />
+      <window_info id="Favorites" order="2" sideWeight="0.5021216" side_tool="true" weight="0.2374798" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8062397" weight="0.4037901" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.5890625" weight="0.3265306" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.49919224" weight="0.32798833" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4109375" side_tool="true" weight="0.3265306" />
+      <window_info anchor="bottom" auto_hide="true" x="21" y="320" width="1238" height="159" id="Terminal" order="11" sideWeight="0.64458805" weight="0.43166667" />
+      <window_info anchor="right" x="0" y="0" width="270" height="524" id="Documentation" order="0" sideWeight="0.500821" side_tool="true" weight="0.21405493" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49917898" visible="true" weight="0.21373391" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add all files" />
+    <MESSAGE value="config  urls.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="config  urls.py" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/venphar/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="412" selection-start-line="412" selection-end-line="412" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/af21ca54-ff06-43b5-9fbf-9a2c1d88a277/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pharmacie/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="127" column="19" lean-forward="true" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
+          <folding>
+            <element signature="e#310#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0002_auto_20201206_1434.py" />
+    <entry file="file://$PROJECT_DIR$/venphar/lib/python3.6/site-packages/django/urls/resolvers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="684" selection-start-line="684" selection-end-line="684" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/auth_user_groups">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/auth_permission">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/auth_user_user_permissions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_productt" />
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_stock" />
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_zone">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0006_auto_20201216_1156.py" />
+    <entry file="file://$PROJECT_DIR$/Fouraso/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/af21ca54-ff06-43b5-9fbf-9a2c1d88a277.DATABASE:phar">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>af21ca54-ff06-43b5-9fbf-9a2c1d88a277.DATABASE:phar</OriginalElement>
+          <nodes>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_stock</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_permission</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.django_session</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_zone</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_sort_Reference_product</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_user_groups</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_user_user_permissions</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.django_migrations</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_productt</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_product</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_people</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_entry</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_user</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_group_permissions</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.auth_group</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.Fouraso_sort</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.django_content_type</node>
+            <node x="" y="">af21ca54-ff06-43b5-9fbf-9a2c1d88a277.TABLE:phar.public.django_admin_log</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.53458177278402" x="870.0" y="791.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/django_admin_log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_sort_Designation_Product" />
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_sort" />
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_people" />
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_entry" />
+    <entry file="file://$PROJECT_DIR$/Fouraso/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0003_auto_20201219_1243.py" />
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0002_auto_20201218_0751.py" />
+    <entry file="file://$PROJECT_DIR$/pharmacie/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0002_auto_20201219_1342.py" />
+    <entry file="file://$PROJECT_DIR$/Fouraso/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://af21ca54-ff06-43b5-9fbf-9a2c1d88a277/database/phar/schema/public/table/Fouraso_command">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/phar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/templates/Fouraso/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/templates/Fouraso/products_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fouraso/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="71" column="84" selection-start-line="71" selection-start-column="84" selection-end-line="71" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pharmacie/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
