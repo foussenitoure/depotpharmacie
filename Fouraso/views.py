@@ -38,3 +38,11 @@ def products_detail(request, product_id):
     return render(request, 'Fouraso/products_list.html', context)
 
 
+def about(request):
+    # products = Product.objects.all()
+
+    # context = {
+    #
+    #     'products': products
+    # }
+    return render(request, 'Fouraso/homepage.html',)
