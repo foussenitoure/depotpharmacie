@@ -8,6 +8,19 @@ class ProductForm(forms.Form):
     reference           = forms.ChoiceField(choices=REFERENCE, required='Générique')
     name                = forms.CharField(label='Name', max_length=30)
     # created_at          = forms.DateTimeField()
+    
+    
+    
+class StockForm(forms.Form):
+    name_product         = forms.CharField(label='Nom produit')
+    zone                 = forms.CharField(label='Zone')
+    qteEntry             = forms.IntegerField(label='Quantité Entrée')
+    qteSort              = forms.IntegerField(label='Quantite Sortie')
+    qteRest              = forms.IntegerField(label='Quantite Restant')
+    updated_at           = forms.DateField()
+    created_at           = forms.DateField()
+
+
 
 # class ProductForm(forms.Form):
 #
@@ -18,7 +31,7 @@ class ProductForm(forms.Form):
 #
 #     zone = forms.ChoiceField(label='Zone', choices=ZONE, required='A')
 #
-#     CATEGORIE = (
+#  j   CATEGORIE = (
 #         ('FIL', 'Fil'),
 #         ('AIGU', 'Aigu'),
 #         ('SATIN', 'Satin'),

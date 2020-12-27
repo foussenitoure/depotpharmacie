@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Products {% endblock %}
+{% block title %} Stock {% endblock %}
 
 {% block content %}
     <div class="table-responsive">
@@ -9,20 +9,29 @@
             <tr>
                   <td><input type="checkbox" id="checkall" /></td>
                   <th>ID</th>
-                  <th>Name</th>
-                  <th>Reference</th>
+                  <th>Nom produit</th>
+                  <th>Zone</th>
+                  <th>Quantite Entrée</th>
+                  <th>Quantite Sortie</th>
+                  <th>Quantite Restante</th>
+                  <th>Date Observation</th>
+                  <th>Date Mise à jour</th>
                   <th>Edit</th>
                   <th>Delete</th>
             </tr>
       </thead>
       <tbody>
-                    {% for product in products %}
+                    {% for stock in stocks %}
                            <tr>
-                                <td><a href="{% url 'products-detail' product.pk %}">{{ product.zone }}</a></td>
-
+                                <td><a href="{% url %}">{{ stock.name_product}}</a></td>
                                 <td><input type="checkbox" class="checkthis" /></td>
-                                <td>{{ product.name }}</td>
-                                <td> {{ product.reference }}</td>
+                                <td>{{ stock.name_product }}</td>
+                                <td> {{ stock.zone }}</td>
+                                <td> {{ stock.qteEntry }}</td>
+                                <td> {{ stock.qteSort }}</td>
+                                <td> {{ stock.qteRest }}</td>
+                                <td> {{ stock.updated_at }}</td>
+                                <td> {{ stock.created_at }}</td>
                                 <td> <p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/edit/{{ product.id }}" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="Edit"><span class="glyphicon glyphicon"></span></a>Edit</p></td>
                                 <td> <p data-placement="top" data-toggle="tooltip" title="Delete"><a href="/delete/{{ product.id }}" class="btn btn-danger btn-xs" data-title="Deletete" data-toggle="modal" data-target="Delete"><span class="glyphicon glyphicon"></span></a>Delete</p></td>
 

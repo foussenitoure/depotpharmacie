@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.template import context
 from django.template import defaulttags
-from Fouraso.form import ProductForm
-from Fouraso.models import Product
+from Fouraso.form import ProductForm, StockForm
+from Fouraso.models import Product, Stock
 
 
 
@@ -17,7 +17,7 @@ def products(request):
 
             # zon    = request.POST.get("zone")
             # cat    = request.POST.get("categorie")
-            na     = request.POST.get("name")
+            na      = request.POST.get("name")
             ref     = request.POST.get("reference")
             # pr     = request.POST.get("price")
             data   = Product(name=na, reference=ref,)
@@ -46,3 +46,16 @@ def about(request):
     #     'products': products
     # }
     return render(request, 'Fouraso/homepage.html',)
+
+
+def stock(request,):
+    Stocks = Stock.objects.all()
+    form = StockForm()
+    # context = {
+    #     # 'stock': stock
+    #
+    # }
+    return render(request, 'Fouraso/stock.html', {'form':form})
+
+    # else:
+    #    form = ProductForm()
