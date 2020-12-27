@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'pharmacie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'phar',
-        'USER': 'myprojectuser',
-        'PASSWORD':'password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE':     'django.db.backends.postgresql',
+        'NAME':       'pharma',
+        'USER':       'myprojectuser',
+        'PASSWORD':   'pharmarico',
+        'HOST':       '127.0.0.1',
+        'PORT':       '5432',
     }
 }
 
