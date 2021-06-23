@@ -3,10 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.template import context
 from django.template import defaulttags
-from Fouraso.form import ProductForm, StockForm
-from Fouraso.models import Product, Stock
-
-
+from Fouraso.form import ProductForm, StockForm, PersonForm, ZoneForm, CommandForm
+from Fouraso.models import Product, Stock, Person, Command, Zone
 
 
 def thanks(request):
@@ -59,3 +57,24 @@ def stock(request,):
 
     # else:
     #    form = ProductForm()
+
+
+def command(request,):
+    Command = Command.objects.all()
+    form = CommandForm()
+    return render (request, 'Fouraso/command.html', {'form':form})
+
+def person(request,):
+    Person = Person.objects.all()
+    form = PersonForm()
+    return render (request, 'Fouraso/person.html', {'form':form})
+
+def zone(request,):
+    Zone = Zone.objects.all()
+    form = ZoneForm()
+    return render (request, 'Fouraso/zone.html', {'form':form})
+
+
+def persons_detail(request):
+    form = PersonForm()
+    return render (request, 'Fouraso/person_detail.html', {'form':form})

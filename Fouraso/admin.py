@@ -22,7 +22,7 @@ class Person(admin.ModelAdmin):
         'email',
         'created_at',
         )
-
+    list_filter = ['status']
     exclude = ['created_at', 'email',]
 
 @admin.register(Product)
@@ -45,10 +45,12 @@ class Command(admin.ModelAdmin):
     field = ['__all__']
 
     list_display = (
+        # 'person',
+        # 'product',
         'qteCommande',
         'price_unitaire',
         'montant',
-        'created_at'
+        'created_at',
         # 'montant_count',
         )
     exclude = []

@@ -59,27 +59,60 @@ class Product(models.Model):
 class Stock(models.Model):
     name_product         = models.ForeignKey('Product', on_delete=models.CASCADE)
     zone                 = models.ForeignKey('Zone', on_delete=models.CASCADE)
-    qteEntry             = models.IntegerField(verbose_name='Quantité Entrée')
-    qteSort              = models.IntegerField(verbose_name='Quantite Sortie')
-    qteRest              = models.IntegerField(verbose_name='Quantite Restant')
-    updated_at           = models.DateField()
-    created_at           = models.DateField()
+    qteEntry             = models.IntegerField(verbose_name='Quantité Entrée', default=0)
+    qteSort              = models.IntegerField(verbose_name='Quantite Sortie', default=0)
+    qteRest              = models.IntegerField(verbose_name='Quantite Restant', default=0)
+    updated_at           = models.DateField(auto_now=True)
+    created_at           = models.DateField(auto_now=True)
 
-    def __str__(self):
-        return ('{}').format(self.qteRest)
+    # This code the show quantity product avaible is save in database
+    def  save(self):
+         self.qteRest = self.qteEntry - self.qteSort
+         return super(Stock, self).save()
+
+    # def __str__(self):
+    #     return ('{}').format(self.qteRest)
 
 class Command(models.Model):
-    person                   = models.ForeignKey('Person', on_delete=models.CASCADE)
+    person                   = models.ForeignKey('Person', null=True, blank=True, on_delete=models.CASCADE)
     product                  = models.ManyToManyField('Product')
-    qteCommande              = models.IntegerField(verbose_name='Quantité')
-    price_unitaire           = models.DecimalField(decimal_places=2, max_digits=20)
-    montant                  = models.DecimalField(decimal_places=2, max_digits=20)
+    qteCommande              = models.IntegerField(default=0)
+    price_unitaire           = models.IntegerField(default=0)
     created_at               = models.DateTimeField(auto_now_add=True)
+    montant                  = models.IntegerField(default=0)
 
-    def __str__(self):
-        return ('{} - {}').format(self.qteCommande, self.montant)
+    # This code the montant is save in database
+    # def  save(self):
+    #      self.montant = self.qteCommande * self.price_unitaire
+    #      return super(Command, self).save()
 
 
+    # This code the montant is not save in database
+    @property
+    def montant(self, *args, **kwargs):
+        montant = self.qteCommande * self.price_unitaire
+        return montant
+
+        # var (qteCommande, price_unitaire, montant)
+        # q   = qteCommande
+        # p   = price_unitaire
+        # m   = montant
+        # # m   = q*p
+
+        # return ('{} - {}').format(self.qteCommande, self.montant)
+        # return ('{}').format(self.m)
+
+# class example(models.Model):
+#     var1 = models.IntegerField(default=0)
+#     var2 = models.IntegerField(default=0)
+#     var3 = models.IntegerField(default=0)
+# DecimalField(decimal_places=2, max_digits=20)
+#
+#     sum = models.IntegerField(...)
+#
+#     def save(self):
+#         self.sum = self.var1 + self.var2 + self.var3
+#         return super(example, self).save()
 
 
 
