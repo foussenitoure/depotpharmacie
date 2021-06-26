@@ -1,10 +1,11 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from django.template import context
-from django.template import defaulttags
-from Fouraso.form import ProductForm, StockForm, PersonForm, ZoneForm, CommandForm
-from Fouraso.models import Product, Stock, Person, Command, Zone
+# from django.template import context
+# from django.template import defaulttags
+from Fouraso.form import ProductForm, StockForm, PersonForm,  CommandForm
+from Fouraso.models import Product, Stock, Person, Command
+    # Zone, ZoneForm,
 
 
 def thanks(request):
@@ -69,10 +70,10 @@ def person(request,):
     form = PersonForm()
     return render (request, 'Fouraso/person.html', {'form':form})
 
-def zone(request,):
-    Zone = Zone.objects.all()
-    form = ZoneForm()
-    return render (request, 'Fouraso/zone.html', {'form':form})
+# def zone(request,):
+#     Zone = Zone.objects.all()
+#     form = ZoneForm()
+#     return render (request, 'Fouraso/zone.html', {'form':form})
 
 
 def persons_detail(request):

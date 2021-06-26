@@ -1,8 +1,8 @@
-import time
+# import time
 from django.db import models
 import datetime
 
-from django.db.models import Avg
+# from django.db.models import Avg
 
 # Create your models here.
 
@@ -14,84 +14,95 @@ from django.db.models import Avg
 
 
 class Person(models.Model):
-        STATUS       = (
-            ('CLIENT',      'Client'),
+        STATUS = (
+            ('GUICHET 1', 'Guichet 1'),
+            ('GUICHET 2', 'Guichet 2'),
+            ('CLIENT',    'Client'),
+            ('PATIENT', 'Patient'),
+            ('MEDECIN', 'Medecin'),
             ('REVENDEUR',   'Revendeur'),
             ('GESTIONNAIRE','Gestionnaire'),
-            ('MEDECIN',     'Medecin'),
-            ('PATIENT',     'Patient'),
             ('FOURNISSEUR', 'Fournisseur'),
             ('COMPANY',     'Company'),)
 
-        status       = models.CharField(max_length=30, choices=STATUS)
-        first_name   = models.CharField(max_length=50, null=True, blank=True, verbose_name='Nom')
-        last_name    = models.CharField(max_length=50, null=True, blank=True, verbose_name='Prénom')
-        contact      = models.CharField(max_length=50, null=True, blank=True, verbose_name='Numéro de Téléphone')
-        email        = models.EmailField(max_length=50, null=True, blank=True, verbose_name='Adresse Email')
-        created_at   = models.DateTimeField(auto_now=True)
+        status = models.CharField(max_length=30, choices=STATUS)
+        first_name = models.CharField(max_length=50, null=True, blank=True, verbose_name='Nom')
+        last_name = models.CharField(max_length=50, null=True, blank=True, verbose_name='Prénom')
+        contact = models.CharField(max_length=50, null=True, blank=True, verbose_name='Numéro de Téléphone')
+        email = models.EmailField(max_length=50, null=True, blank=True, verbose_name='Adresse Email')
+        created_at = models.DateTimeField(auto_now=True)
 
         def __str__(self):
             return ('{} - {} - {}').format(self.first_name, self.last_name, self.contact)
 
-class Zone(models.Model):
-        LOCALITE = (
-            ('ZANTIEBOUGOU', 'Zantiebougou'),
-            ('KATI FALADIE', 'Kati Faladie'),)
-        localite = models.CharField(max_length=30, choices=LOCALITE)
 
-        def __str__(self):
-            return self.localite
+# class Zone(models.Model):
+#         LOCALITE = (
+#             ('ZANTIEBOUGOU', 'Zantiebougou'),
+#             ('KATI FALADIE', 'Kati Faladie'),)
+#         localite = models.CharField(max_length=30, choices=LOCALITE)
+#
+#         def __str__(self):
+#             return self.localite
 
 class Product(models.Model):
-
-    REFERENCE   = (
+    REFERENCE = (
             ('GENERIQUE',  'GENERIQUE'),
             ('SPECIALITE', 'SPECIALITE'),)
 
-    reference     = models.CharField(max_length=30, choices=REFERENCE, default='GENERIQUE')
-    name          = models.CharField(max_length=100, blank=True, verbose_name='Nom du produit')
-    created_at    = models.DateField(auto_now=True)
+    reference = models.CharField(max_length=30, choices=REFERENCE, default='GENERIQUE')
+    name = models.CharField(max_length=100, blank=True, verbose_name='Nom du produit')
+    price = models.DecimalField(decimal_places=2, max_digits=20, default=0)
+    # created_at = models.DateField(auto_now=True)
 
     def __str__(self):
-        return ('{}-{}').format(self.name, self.reference)
-
-
-class Stock(models.Model):
-    name_product         = models.ForeignKey('Product', on_delete=models.CASCADE)
-    zone                 = models.ForeignKey('Zone', on_delete=models.CASCADE)
-    qteEntry             = models.IntegerField(verbose_name='Quantité Entrée', default=0)
-    qteSort              = models.IntegerField(verbose_name='Quantite Sortie', default=0)
-    qteRest              = models.IntegerField(verbose_name='Quantite Restant', default=0)
-    updated_at           = models.DateField(auto_now=True)
-    created_at           = models.DateField(auto_now=True)
-
-    # This code the show quantity product avaible is save in database
-    def  save(self):
-         self.qteRest = self.qteEntry - self.qteSort
-         return super(Stock, self).save()
-
-    # def __str__(self):
-    #     return ('{}').format(self.qteRest)
+        return ('{}').format(self.name,)
 
 class Command(models.Model):
-    person                   = models.ForeignKey('Person', null=True, blank=True, on_delete=models.CASCADE)
-    product                  = models.ManyToManyField('Product')
-    qteCommande              = models.IntegerField(default=0)
-    price_unitaire           = models.IntegerField(default=0)
-    created_at               = models.DateTimeField(auto_now_add=True)
-    montant                  = models.IntegerField(default=0)
+    LOCALITE = (
+        ('ZANTIEBOUGOU', 'Zantiebougou'),
+        ('KATI FALADIE', 'Kati Faladie'),)
+    localite = models.CharField(max_length=30, choices=LOCALITE, verbose_name='Boutique')
+    id_person = models.ForeignKey('Person', on_delete=models.CASCADE)
+    product = models.ManyToManyField('Product')
+    qteCommande = models.IntegerField(default=0, verbose_name='Quantite')
+    submontant = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='Sous Total')
+    remise = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='Remise')
+    tva = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='TVA')
+    created_at = models.DateTimeField(auto_now_add=True)
+    montant = models.DecimalField(decimal_places=2, max_digits=20, verbose_name='Montant Total')
 
     # This code the montant is save in database
     # def  save(self):
     #      self.montant = self.qteCommande * self.price_unitaire
     #      return super(Command, self).save()
 
-
     # This code the montant is not save in database
-    @property
-    def montant(self, *args, **kwargs):
-        montant = self.qteCommande * self.price_unitaire
-        return montant
+
+    # @property
+    # def montant(self, *args, **kwargs):
+    #     montant = self.qteCommande * self.price
+    #     return montant
+
+
+class Stock(models.Model):
+    name_product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    # zone = models.ForeignKey('Zone', on_delete=models.CASCADE)
+    qteEntry = models.IntegerField(verbose_name='Quantité Entrée', default=0)
+    qteSort = models.IntegerField(verbose_name='Quantite Sortie', default=0)
+    qteRest = models.IntegerField(verbose_name='Quantite Restant', default=0)
+    updated_at = models.DateField(auto_now=True)
+    created_at = models.DateField(auto_now=True)
+
+    # This code the show quantity product avaible is save in database
+    def save(self, *args, **kwargs):
+        self.qteRest = self.qteEntry - self.qteSort
+        return super(Stock, self).save()
+
+    # def __str__(self):
+    #     return ('{}').format(self.qteRest)
+
+
 
         # var (qteCommande, price_unitaire, montant)
         # q   = qteCommande

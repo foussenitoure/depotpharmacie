@@ -13,10 +13,6 @@ urlpatterns = [
     path('products/', views.products, name='products'),
     path('products/detail/<int:product_id>/', views.products_detail, name='products-detail'),
     path('stock/', views.stock, name='stock'),
-    path('zone/', views.zone, name='zone'),
+    # path('zone/', views.zone, name='zone'),
 
 ]
-
-
-
-# 'Fouraso\\/products\\/detail\\/(?P<product_id>[0-9]+)\\/$'

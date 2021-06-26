@@ -1,12 +1,12 @@
 from django.contrib import admin
-from Fouraso.models import  Person, Zone, Product,  Command, Stock
-
+from Fouraso.models import Person,  Product,  Command, Stock
+# Zone,
 
 # Register your models here.
-@admin.register(Zone)
-class Zone(admin.ModelAdmin):
-    models = Zone
-    field = ['__all__']
+# @admin.register(Zone)
+# class Zone(admin.ModelAdmin):
+#     models = Zone
+#     field = ['__all__']
 
 
 @admin.register(Person)
@@ -20,10 +20,10 @@ class Person(admin.ModelAdmin):
         'last_name',
         'contact',
         'email',
-        'created_at',
-        )
+        'created_at',)
     list_filter = ['status']
-    exclude = ['created_at', 'email',]
+    exclude = ['created_at', 'email']
+
 
 @admin.register(Product)
 class Product(admin.ModelAdmin):
@@ -33,11 +33,11 @@ class Product(admin.ModelAdmin):
     list_display = (
         'name',
         'reference',
-
-        )
+        'price',)
 
     list_filter = ['name']
-    exclude = ['created_at',]
+    exclude = ['created_at']
+
 
 @admin.register(Command)
 class Command(admin.ModelAdmin):
@@ -47,18 +47,15 @@ class Command(admin.ModelAdmin):
     list_display = (
         # 'person',
         # 'product',
+        'localite',
         'qteCommande',
-        'price_unitaire',
-        'montant',
-        'created_at',
-        # 'montant_count',
-        )
-    exclude = []
-    list_filter = ['created_at']
-
-    # def montant_count(self, obj):
-    #     return Stock.objects.filter(qteEntry=obj).count()
-    # montant_count.short_description = "Nombre_Entree"
+        'submontant',
+        'remise',
+        'tva',
+        'montant',)
+    exclude = ['created_at']
+    ordering = ['created_at']
+    list_filter = ['created_at', 'localite']
 
 
 @admin.register(Stock)
@@ -70,11 +67,6 @@ class Stock(admin.ModelAdmin):
         'name_product',
         'qteEntry',
         'qteSort',
-        'qteRest',
-        'zone',
-
-        )
-    list_filter = ['zone']
+        'qteRest',)
+    # list_filter = ['zone']
     exclude = ['created_at', 'updated_at']
-
-

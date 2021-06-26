@@ -1,4 +1,5 @@
 from django import forms
+# from django.core.exceptions import ValidationError
 
 
 class PersonForm(forms.Form):
@@ -11,19 +12,19 @@ class PersonForm(forms.Form):
             ('FOURNISSEUR', 'Fournisseur'),
             ('COMPANY', 'Company'),)
 
-    status           = forms.ChoiceField(choices=STATUS,)
-    first_name       = forms.CharField(max_length=50,   label='Nom')
-    last_name        = forms.CharField(max_length=50,   label='Prenom')
-    contact          = forms.CharField(max_length=50,   label='Numero de Telephone')
-    email            = forms.EmailField(max_length=50,   label='Adresse Email')
-    created_at       = forms.DateTimeField()
+    status = forms.ChoiceField(choices=STATUS,)
+    first_name = forms.CharField(max_length=50,   label='Nom')
+    last_name = forms.CharField(max_length=50,   label='Prenom')
+    contact = forms.CharField(max_length=50,   label='Numero de Telephone')
+    email = forms.EmailField(max_length=50,   label='Adresse Email')
+    created_at = forms.DateTimeField()
 
 
-class ZoneForm(forms.Form):
-    LOCALITE = (
-        ('ZANTIEBOUGOU', 'Zantiebougou'),
-        ('KATI FALADIE', 'Kati Faladie'),)
-    localite = forms.ChoiceField(choices=LOCALITE)
+# class ZoneForm(forms.Form):
+#     LOCALITE = (
+#         ('ZANTIEBOUGOU', 'Zantiebougou'),
+#         ('KATI FALADIE', 'Kati Faladie'),)
+#     localite = forms.ChoiceField(choices=LOCALITE)
 
 
 class ProductForm(forms.Form):
@@ -31,48 +32,43 @@ class ProductForm(forms.Form):
             ('GENERIQUE',  'Generique'),
             ('SPECIALITE', 'Specialite'),)
 
-    reference           = forms.ChoiceField(choices=REFERENCE, required='Generique')
-    name                = forms.CharField(label='Name', max_length=30)
+    reference = forms.ChoiceField(choices=REFERENCE, required='Generique')
+    name = forms.CharField(label='Name', max_length=30)
+    price = forms.DecimalField(label='Prix')
     # created_at          = forms.DateTimeField()
-    
-    
-    
-class StockForm(forms.Form):
-    name_product         = forms.CharField(label='Nom produit')
-    zone                 = forms.CharField(label='Zone')
-    qteEntry             = forms.IntegerField(label='Quantite Entree')
-    qteSort              = forms.IntegerField(label='Quantite Sortie')
-    qteRest              = forms.IntegerField(label='Quantite Restant')
-    updated_at           = forms.DateField()
-    created_at           = forms.DateField()
-
-
 
 
 class CommandForm(forms.Form):
+    LOCALITE = (
+                ('ZANTIEBOUGOU', 'Zantiebougou'),
+                ('KATI FALADIE', 'Kati Faladie'),)
+    localite = forms.ChoiceField(choices=LOCALITE)
     # person                   =  forms.ForeignKey('Person',)
     # product                  =  forms.ManyToManyField('Product')
-    qteCommande              =  forms.IntegerField(label='Quantite Commande')
-    price_unitaire           =  forms.IntegerField(label='Prix Unitaire')
-    created_at               =  forms.DateTimeField(label='Date commande')
-    montant                  =  forms.IntegerField(label='Montant Total')
+    qteCommande = forms.IntegerField(label='Quantite Commande')
+    submontant = forms.DecimalField()
+    remise = forms.DecimalField(label='REMISE')
+    tva = forms.DecimalField(label='TVA')
+    created_at = forms.DateTimeField(label='Date commande')
+    montant = forms.IntegerField(label='Montant Total')
+
+    # This function for clean fields commands
+
+    # def clean_qteCommande(self):
+    #     data = self.cleaned_data['qteCommande']
+    #     if " 0 " not in data:
+    #         raise ValidationError("You have forgotten about Fred!")
+
+    # Always return a value to use as the new cleaned data, even if
+    # this method didn't change it.
+    # return data
 
 
-# class ProductForm(forms.Form):
-#
-#     ZONE = (
-#         ('ZONE_1', 'A'),
-#         ('ZONE_2', 'B'),
-#         ('ZONE_3', 'C'),)
-#
-#     zone = forms.ChoiceField(label='Zone', choices=ZONE, required='A')
-#
-#  j   CATEGORIE = (
-#         ('FIL', 'Fil'),
-#         ('AIGU', 'Aigu'),
-#         ('SATIN', 'Satin'),
-#         ('COL', 'Col'),)
-#     categorie = forms.ChoiceField(label='Categorie', choices=CATEGORIE, required='Fil')
-#     name      = forms.CharField(label='Name', max_length=30)
-#     quantite  = forms.IntegerField(label='Quantite')
-#     price     = forms.IntegerField(label='Prix')
+class StockForm(forms.Form):
+    name_product = forms.CharField(label='Nom produit')
+    zone = forms.CharField(label='Zone')
+    qteEntry = forms.IntegerField(label='Quantite Entree')
+    qteSort = forms.IntegerField(label='Quantite Sortie')
+    qteRest = forms.IntegerField(label='Quantite Restant')
+    updated_at = forms.DateField()
+    created_at = forms.DateField()
