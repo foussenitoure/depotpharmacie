@@ -26,6 +26,7 @@ class Person(models.Model):
             ('COMPANY',     'Company'),)
 
         status = models.CharField(max_length=30, choices=STATUS)
+        # user = models.ForeignKey('User', on_delete=models.CASCADE)
         first_name = models.CharField(max_length=50, null=True, blank=True, verbose_name='Nom')
         last_name = models.CharField(max_length=50, null=True, blank=True, verbose_name='Prénom')
         contact = models.CharField(max_length=50, null=True, blank=True, verbose_name='Numéro de Téléphone')
@@ -62,8 +63,8 @@ class Command(models.Model):
     LOCALITE = (
         ('ZANTIEBOUGOU', 'Zantiebougou'),
         ('KATI FALADIE', 'Kati Faladie'),)
-    localite = models.CharField(max_length=30, choices=LOCALITE, verbose_name='Boutique')
-    id_person = models.ForeignKey('Person', on_delete=models.CASCADE)
+    localite = models.CharField(max_length=30, choices=LOCALITE, verbose_name='Boutique', default='Zantiebougou')
+    id_person = models.ForeignKey('Person', on_delete=models.CASCADE , verbose_name='Titulaire')
     product = models.ManyToManyField('Product')
     qteCommande = models.IntegerField(default=0, verbose_name='Quantite')
     submontant = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='Sous Total')
@@ -72,6 +73,8 @@ class Command(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     montant = models.DecimalField(decimal_places=2, max_digits=20, verbose_name='Montant Total')
 
+    def __str__(self):
+        return ('{}').format(self.id,)
     # This code the montant is save in database
     # def  save(self):
     #      self.montant = self.qteCommande * self.price_unitaire

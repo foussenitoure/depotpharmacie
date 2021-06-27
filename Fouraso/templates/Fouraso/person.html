@@ -1,7 +1,13 @@
-{% extends 'Fouraso/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-<h1>Tableau de Person</h1>
-<p>nom</p>
-<p>prenom</p>
-<p>status</p>
+{% block content %}
+    <h2 class="text-center">PERSON</h2>
+    <form action="{% url 'persons' %}" method="post">
+        {% csrf_token %}
+            <table class="col-sm-6 text-center" >
+                {{ form.as_table }}
+            </table><br />
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+{% endblock %}

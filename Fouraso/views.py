@@ -13,12 +13,9 @@ def thanks(request):
 
 def products(request):
     if request.method == 'POST':
-
-            # zon    = request.POST.get("zone")
-            # cat    = request.POST.get("categorie")
             na      = request.POST.get("name")
             ref     = request.POST.get("reference")
-            # pr     = request.POST.get("price")
+            pr     = request.POST.get("price")
             data   = Product(name=na, reference=ref,)
             data.save()
             return HttpResponseRedirect(reverse('thanks'))
