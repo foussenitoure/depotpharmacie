@@ -43,8 +43,8 @@ class CommandForm(forms.Form):
                 ('ZANTIEBOUGOU', 'Zantiebougou'),
                 ('KATI FALADIE', 'Kati Faladie'),)
     localite = forms.ChoiceField(choices=LOCALITE)
-    # person                   =  forms.ForeignKey('Person',)
-    # product                  =  forms.ManyToManyField('Product')
+    # id_person = forms.ForeignKey('Person',)
+    # product = forms.ManyToManyField('Product')
     qteCommande = forms.IntegerField(label='Quantite Commande')
     submontant = forms.DecimalField()
     remise = forms.DecimalField(label='REMISE')

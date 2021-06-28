@@ -3,9 +3,11 @@ from django.urls import path
 from . import views
 
 
+namespace = 'Fouraso'
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('about/', views.about, name='homepage'),
+    # path('admin/', admin.site.urls),
+    path('', views.about, name='homepage'),
     path('thanks/', views.thanks, name='thanks'),
     path('command/', views.command, name='command'),
     path('person/', views.person, name='persons'),

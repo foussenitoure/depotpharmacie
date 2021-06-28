@@ -57,7 +57,7 @@ class Product(models.Model):
     # created_at = models.DateField(auto_now=True)
 
     def __str__(self):
-        return ('{}').format(self.name,)
+        return ('{}{}').format(self.name, self.price,)
 
 class Command(models.Model):
     LOCALITE = (
