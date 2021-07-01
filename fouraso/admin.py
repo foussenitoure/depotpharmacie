@@ -42,7 +42,8 @@ class Product(admin.ModelAdmin):
 @admin.register(Command)
 class Command(admin.ModelAdmin):
     models = Command
-    field = ['__all__']
+    # field = ['__all__']
+    field = ['localite', 'submontant', 'remise', 'tva', 'montant',]
 
     list_display = (
         # 'person',
@@ -53,8 +54,9 @@ class Command(admin.ModelAdmin):
         'remise',
         'tva',
         'montant',
-        'codeCommand',)
-    exclude = ['created_at']
+        'codeCommand',
+    )
+    exclude = ['created_at', 'codeCommand',]
     ordering = ['created_at']
     list_filter = ['created_at', 'localite','codeCommand',]
 

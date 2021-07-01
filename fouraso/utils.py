@@ -7,9 +7,7 @@ def random_string_generator():
     result = ''
     for i in range(0, 11):
         result += random.choice(characters)
-
     return result
-
 
 def unique_command_id_generator(instance):
     codeCommand_new_id = random_string_generator()
