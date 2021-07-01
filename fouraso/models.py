@@ -1,5 +1,10 @@
 # import time
 from django.db import models
+import random
+from random import  randint
+from django.db import models
+from django.db.models.signals import pre_save
+from .utils import unique_command_id_generator
 import datetime
 
 # from django.db.models import Avg
@@ -67,6 +72,7 @@ class Command(models.Model):
     id_person = models.ForeignKey('Person', on_delete=models.CASCADE , verbose_name='Titulaire')
     product = models.ManyToManyField('Product')
     qteCommande = models.IntegerField(default=0, verbose_name='Quantite')
+    codeCommand = models.CharField(max_length=100, blank=True, verbose_name='Code Commande')
     submontant = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='Sous Total')
     remise = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='Remise')
     tva = models.DecimalField(decimal_places=2, max_digits=20, default=0, verbose_name='TVA')
@@ -75,6 +81,13 @@ class Command(models.Model):
 
     def __str__(self):
         return ('{}').format(self.id,)
+
+def pre_save_command_id(instance, sender, *args, **kwargs):
+    if not instance.codeCommand:
+            instance.codeCommand = unique_command_id_generator(instance)
+
+pre_save.connect(pre_save_command_id, sender=Command)
+
     # This code the montant is save in database
     # def  save(self):
     #      self.montant = self.qteCommande * self.price_unitaire

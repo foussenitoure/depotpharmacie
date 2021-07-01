@@ -1,12 +1,12 @@
-{% extends 'Fouraso/base.html' %}
+{% extends 'fouraso/base.html' %}
 {% load static %}
 
 {% block content %}
-    <h2 class="text-center">STOCK DISPONIBLE</h2>
-    <form action="{% url 'stock' %}" method="post">
+    <h2 class="text-center">PERSON</h2>
+    <form action="{% url 'persons' %}" method="post">
         {% csrf_token %}
             <table class="col-sm-6 text-center" >
-               {{ form.as_table }}
+                {{ form.as_table }}
             </table><br />
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>

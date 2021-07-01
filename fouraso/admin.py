@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Fouraso.models import Person,  Product,  Command, Stock
+from fouraso.models import Person,  Product,  Command, Stock
 # Zone,
 
 # Register your models here.
@@ -48,14 +48,15 @@ class Command(admin.ModelAdmin):
         # 'person',
         # 'product',
         'localite',
-        'qteCommande',
+        # 'qteCommand',
         'submontant',
         'remise',
         'tva',
-        'montant',)
+        'montant',
+        'codeCommand',)
     exclude = ['created_at']
     ordering = ['created_at']
-    list_filter = ['created_at', 'localite']
+    list_filter = ['created_at', 'localite','codeCommand',]
 
 
 @admin.register(Stock)

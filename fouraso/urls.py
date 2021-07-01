@@ -1,20 +1,21 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 
-namespace = 'Fouraso'
+namespace = 'fouraso'
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', views.about, name='homepage'),
     path('thanks/', views.thanks, name='thanks'),
     path('command/', views.command, name='command'),
     path('person/', views.person, name='persons'),
-    path('person/detail/<int:person_id>/', views.persons_detail, name='person-detail'),
+    re_path(r'^(?P<person_id>[0-9]+)/$', views.persons_detail, name='person_detail'),
     path('products/', views.products, name='products'),
-    path('products/detail/<int:product_id>/', views.products_detail, name='products-detail'),
+    # path('products/', views.list_products, name='list_products'),
+    re_path(r'^(?P<product_id>[0-9]+)/$', views.products_detail, name='products_detail'),
     path('stock/', views.stock, name='stock'),
-    # path('zone/', views.zone, name='zone'),
+
 
 ]

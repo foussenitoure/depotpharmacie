@@ -3,9 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse
 # from django.template import context
 # from django.template import defaulttags
-from Fouraso.form import ProductForm, StockForm, PersonForm, CommandForm
-from Fouraso.models import Product, Stock, Person, Command
-    # Zone, ZoneForm,
+from fouraso.form import ProductForm, StockForm, PersonForm, CommandForm
+from fouraso.models import Product, Stock, Person, Command
 
 
 def thanks(request):
@@ -21,27 +20,27 @@ def products(request):
             return HttpResponseRedirect(reverse('thanks'))
     else:
        form = ProductForm()
-    return render(request, 'Fouraso/products.html', {'form': form})
+    return render(request, 'fouraso/products.html', {'form': form})
 
 
-def products_detail(request, product_id):
+def products_detail(request, id=id):
     products = Product.objects.all()
 
     context = {
 
         'products': products
     }
-    return render(request, 'Fouraso/products_list.html', context)
+    return render(request, 'fouraso/products_list.html', context)
 
 
-def about(request):
+def about(request,):
     # products = Product.objects.all()
 
     # context = {
     #
     #     'products': products
     # }
-    return render(request, 'Fouraso/homepage.html',)
+    return render(request, 'fouraso/homepage.html', )
 
 
 def stock(request,):
@@ -51,7 +50,7 @@ def stock(request,):
     #     # 'stock': stock
     #
     # }
-    return render(request, 'Fouraso/stock.html', {'form': form})
+    return render(request, 'fouraso/stock.html', {'form': form})
 
     # else:
     #    form = ProductForm()
@@ -61,20 +60,21 @@ def command(request,):
     if request.method == 'POST':
             locat = request.POST.get("localite")
             qteC = request.POST.get("qteCommande")
+            codC = request.POST.get("codeCommand")
             subm = request.POST.get("submontant")
             rm = request.POST.get("remise")
             tv = request.POST.get("tva")
             dat = request.POST.get("created_at")
             mont = request.POST.get("montant")
-            data = Command(localite=locat, qteCommande=qteC, submontant=subm,
-                             remise=rm, tva=tv, created_at=dat, montant=mont,)
+            data = Command(localite=locat, qteCommande=qteC, codeCommand=codC,
+                           bmontant=subm, remise=rm, tva=tv, created_at=dat, montant=mont,)
             data.save()
             return HttpResponseRedirect(reverse('thanks'))
     else:
         form = CommandForm()
-    return render(request, 'Fouraso/command.html', {'form': form})
+    return render(request, 'fouraso/command.html', {'form': form})
 
-def person(request):
+def person(request,):
     if request.method == 'POST':
             stat = request.POST.get("status")
             f_name = request.POST.get("first_name")
@@ -88,14 +88,14 @@ def person(request):
             return HttpResponseRedirect(reverse('thanks'))
     else:
         form = PersonForm()
-    return render(request, 'Fouraso/person.html', {'form': form})
-
-# def zone(request,):
-#     Zone = Zone.objects.all()
-#     form = ZoneForm()
-#     return render (request, 'Fouraso/zone.html', {'form':form})
+    return render(request, 'fouraso/person.html', {'form': form})
 
 
-def persons_detail(request):
-    form = PersonForm()
-    return render (request, 'Fouraso/person_detail.html', {'form':form})
+def persons_detail(request, id=id):
+    persons = Person.objects.all()
+
+    context = {
+
+        'persons': persons
+    }
+    return render (request, 'fouraso/person_detail.html', context)
